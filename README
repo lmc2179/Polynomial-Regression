@@ -1,0 +1,15 @@
+Machine Learning Examples
+Louis Cialdella, louiscialdella@gmail.com
+2013
+
+This is a set of examples of simple Machine Learning examples of the type one might find in an introductory course covering regression and classification problems, intended for practice and education. Anyone who finds them useful or interesting is free to use them.
+
+I'll be starting with Linear Basis function models, particularly polynomial fits to synthetic data with Gaussian noise.
+
+A quick rundown of the files:
+1. README: This one. 
+2. Main.py: The file which runs the demonstrations. Currently, fits a third order polynomial to a randomly generated polynomial plus Gaussian noise.
+3. Regression.py: Contains functions which allow generation, evaluation, and training of linear basis functions.
+4. DataSets.py: Creates synthetic data.
+5. GraphData.py: Uses matplotlib to plot the data.
+6. Error.py: TODO; will allow for comparison of models and selection of the best model via K-fold cross validation.
