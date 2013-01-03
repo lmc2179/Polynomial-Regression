@@ -3,6 +3,7 @@
 import GraphData as Graph
 import DataSets as Data
 import Regression
+import CrossValidation as CV
 import pdb
 
 #Generate the data from the basis function
