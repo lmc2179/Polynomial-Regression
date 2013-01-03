@@ -12,4 +12,4 @@ A quick rundown of the files:
 3. Regression.py: Contains functions which allow generation, evaluation, and training of linear basis functions.
 4. DataSets.py: Creates synthetic data.
 5. GraphData.py: Uses matplotlib to plot the data.
-6. Error.py: TODO; will allow for comparison of models and selection of the best model via K-fold cross validation.
+6. CrossValidation.py: WIP; will allow for comparison of models and selection of the best model via K-fold cross validation.

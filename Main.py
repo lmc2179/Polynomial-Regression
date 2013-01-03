@@ -5,9 +5,16 @@ import DataSets as Data
 import Regression
 import CrossValidation as CV
 import pdb
+import math
+import random
+
+#Generate the order of the random true function
+trueOrder = random.randint(1,10)
 
 #Generate the data from the basis function
-D = Data.genData()
+D = Data.genData(trueOrder)
+
+error,order = CV.squaredErrorChoose(D[0],D[1],10)
 
 #Graph the points on the base polynomial
 Graph.lineColor(D[0],D[1],'red')
@@ -18,8 +25,8 @@ D[1] = Data.addGaussianNoise(D[1],1.0/2000)
 #Graph them as points in blue
 Graph.pointsSimple(D[0],D[1])
 
-#Estimate the coefficients of the 3rd order polynomial
-fit = Regression.polyTrain(D[0],D[1],3)
+#Estimate the coefficients of the polynomial with best order
+fit = Regression.polyTrain(D[0],D[1],order)
 
 #Get the function's estimates for the training x values
 z = [fit(i) for i in D[0]]
@@ -29,3 +36,5 @@ Graph.lineColor(D[0],z,'g')
 
 #Show the plot
 Graph.show()
+
+print "True function was an order " + str(trueOrder) + " polynomial, fit with order " + str(order)
