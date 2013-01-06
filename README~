@@ -1,0 +1,15 @@
+Polynomial regression
+Louis Cialdella, louiscialdella@gmail.com
+2013
+
+This is a simple implementation of 2D polynomial regression using least squares, where the best order polynomial is selected using K-fold cross validation.
+
+I'll be starting with Linear Basis function models, particularly polynomial fits to synthetic data with Gaussian noise.
+
+A quick rundown of the files:
+1. README: This one. 
+2. Demo.py: The file which runs the demonstrations. By default, generates a random polynomial of order 1 to 10 and fits it as a demonstration. If the command line argument "nonpoly" is given, fits a sin wave instead. In both cases, 5-fold cross validation is used to select the order of the model polynomial.
+3. Regression.py: Contains functions which allow generation, evaluation, and training of linear basis functions.
+4. DataSets.py: Creates basic synthetic data and allows adding Gaussian noise.
+5. GraphData.py: Uses matplotlib to plot the data.
+6. CrossValidation.py: Compares the models using K-fold cross validation.

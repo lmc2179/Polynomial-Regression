@@ -7,14 +7,22 @@ import CrossValidation as CV
 import pdb
 import math
 import random
-
-#Generate the order of the random true function
-trueOrder = random.randint(1,10)
+import sys
 
 #Generate the data from the basis function
-D = Data.genData(trueOrder)
+if(len(sys.argv) == 1):
+	#Generate the order of the random true polynomial function
+	trueOrder = random.randint(1,10)	
+	D = Data.genData(trueOrder)
+elif(sys.argv[1] == "nonpoly"):
+	D = Data.genNonPoly()
+else:
+	raise Exception("Invalid command line argument")
 
-error,order = CV.squaredErrorChoose(D[0],D[1],10)
+
+
+
+error,order = CV.kFoldErrorChoose(D[0],D[1],10,5)
 
 #Graph the points on the base polynomial
 Graph.lineColor(D[0],D[1],'red')
@@ -37,4 +45,5 @@ Graph.lineColor(D[0],z,'g')
 #Show the plot
 Graph.show()
 
-print "True function was an order " + str(trueOrder) + " polynomial, fit with order " + str(order)
+if(len(sys.argv) == 1):
+	print "True function was an order " + str(trueOrder) + " polynomial, fit with order " + str(order)
