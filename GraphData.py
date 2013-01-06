@@ -1,3 +1,5 @@
+# This includes wrapper functions for a handful of basic matplotlib functions.
+
 import matplotlib.pyplot as mpl
 
 def lineSimple(x,y):

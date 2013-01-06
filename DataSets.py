@@ -1,4 +1,5 @@
 import random
+import math
 import Regression as R
 
 
@@ -9,6 +10,11 @@ def genData(order):
 	poly = R.weightedSum(w,R.polyList(order))
 	y = [(poly (i)) for i in x]
 
+	return [x,y]
+
+def genNonPoly():
+	x = [i for i in range(-100,100)]
+	y = [2000*math.sin(i) for i in x]
 	return [x,y]
 
 def addGaussianNoise(x,B):
