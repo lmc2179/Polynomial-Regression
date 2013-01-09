@@ -43,7 +43,7 @@ def squaredErrorChoose(x,y,maxOrder):
 
 # Find the polynomial with the smallest k-fold error
 
-def kFoldErrorChoose(x,y,maxOrder,k): #TODO
+def kFoldErrorChoose(x,y,maxOrder,k): 
 	e = [0 for i in range(0,maxOrder)]
 	d = kSplit([x,y],k)
 #	pdb.set_trace()

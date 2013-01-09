@@ -2,7 +2,11 @@ Polynomial regression
 Louis Cialdella, louiscialdella@gmail.com
 2013
 
-This is a simple implementation of 2D polynomial regression using least squares, where the best order polynomial is selected using K-fold cross validation.
+This is a simple implementation of 2D polynomial regression using least squares, where the best order polynomial is selected using K-fold cross validation. 
+
+The outside libraries being used are:
+1. Numpy, for quickly finding the pseudoinverse and to use the argmin function.
+2. Matplotlib, to graph the data.
 
 A quick rundown of the files:
 1. README: This one. 

@@ -28,11 +28,8 @@ def weightedSum(w,F):
 		raise Exception("Function/weight size mismatch")
 	else:
 		return lambda x:sum([w[i]*F[i](x) for i in range(0,len(w))])
-
-
-###############
-#Simple case: We fit the third order polynomial that works with the data using least squares.
-###############
+############
+# Here, we fit the polynomial of the given order with the max likelihood estimates for the weights.
 
 def polyTrain(x,y,order): 
 	#Initialize the weight vector and design matrix
