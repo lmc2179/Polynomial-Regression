@@ -1,4 +1,4 @@
-### This file generates a random third order polynomial, adds Gaussian noise, and finds the Least Squares third order polynomial fit.
+### This file generates a random polynomial, adds Gaussian noise, and finds the Least Squares third order polynomial fit.
 ### This is a prototype for a more interesting class of regression programs, starting with a simple polynomial example.
 import GraphData as Graph
 import DataSets as Data
